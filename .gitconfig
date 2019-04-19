@@ -1,0 +1,109 @@
+[alias]
+	amend = commit --amend --no-edit --reset-author
+	assume = update-index --assume-unchanged
+	assumed = !git ls-files -v | grep '^[hsmrck?]' | cut -c 3-
+	fixup = commit --fixup
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	ls = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+	prune = remote prune origin
+	remotes = remote -v
+	staged = diff --staged
+	unassume = update-index --no-assume-unchanged
+	undo = reset --hard
+	unmerged = branch --no-merged
+	unmerged-remote = branch --remote --no-merged
+	unstage = reset HEAD --
+	word-diff = diff --word-diff
+
+[branch]
+	autosetupmerge = true
+	autosetuprebase = always
+
+[checkout]
+        defaultRemote = origin
+
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+	ui = true
+
+[color "branch"]
+	current = red reverse
+	local = blue
+	remote = green
+
+[color "diff"]
+	meta = yellow
+	frag = magenta
+	old = red bold
+	new = green
+	plain = white
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+
+[commit]
+	verbose = true
+
+[core]
+	# A global .gitignore file.
+	excludesFile = ~/.gitignore-global
+
+[diff]
+	tool = vimdiff
+
+[fetch]
+	# Always prune when fetching (and pulling).
+	prune = true
+
+[gitsh]
+	nogreeting = true
+
+[grep]
+	# Show the line numbers in the output.
+	lineNumber = true
+
+[help]
+	autocorrect = 1
+
+[include]
+	path = ~/.gitconfig-local
+
+[rebase]
+	autosquash = true
+	autostash = true
+
+[rerere]
+	# Store and re-use manual conflict resolution changes.
+	enabled = true
+
+[push]
+	# Push the current branch to update a branch with the same name on the
+	# receiving end.
+	default = current
+
+[url "https://github.com/"]
+	insteadOf = gh:
+
+[url "https://gist.github.com/"]
+	insteadOf = gist:
+
+[url "https://bitbucket.org/"]
+	insteadOf = bb:
+
+[url "https://git.drupal.org/project/"]
+	# Clone from drupal.org using "git clone do:{name}"
+	# or "git clone drupal:{name}".
+	insteadOf = do:
+	insteadOf = drupal:
+
+[pull]
+	ff = only
+	rebase = true
+
+[merge]
+	defaultToUpstream = true
+	ff = false
