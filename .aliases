@@ -1,0 +1,48 @@
+alias ga="git add -p"
+alias gc="git commit"
+alias gca="git commit --amend --no-edit --reset-author"
+alias gcm="git commit -m"
+alias gl="git log"
+alias gs="git status"
+
+alias gh="github"
+alias nah="git reset --hard && git clean -fd"
+alias wip="git add . && git commit -m 'wip'"
+
+alias l="ls -lah"
+
+# Fast open
+alias o="open ."
+
+alias p="phpunit"
+alias pf="phpunit --filter "
+alias pstorm="phpstorm"
+alias st="subl"
+alias stt="subl ."
+
+# Quickly go to the Code directory
+alias web="cd ~/Code"
+
+alias yd="yarn dev"
+alias yp="yarn prod"
+alias ys="yarn serve"
+alias yw="yarn watch"
+
+# Docksal
+alias f="fin"
+
+# Shorter Git commands.
+alias add='git add'
+alias amend='git commit --amend'
+alias clone='git clone'
+alias commit='git commit'
+alias pull='git pull'
+alias push='git push'
+alias rebase='git rebase'
+
+alias hosts="sudo vim /etc/hosts"
+alias sshconfig='vim ~/.ssh/config'
+alias zshconfig='vim ~/.zshrc'
+
+# PhpStorm
+alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
